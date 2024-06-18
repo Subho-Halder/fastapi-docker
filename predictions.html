@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predictions</title>
+</head>
+<body>
+    <h1>Predictions</h1>
+    
+    <h2>Logistic Regression</h2>
+    <p>Loan Default: {{ predictions['Logistic Regression']['Loan Default'] }}</p>
+    <p>Probability of Default: {{ predictions['Logistic Regression']['Probability of Default'] }}</p>
+
+    <h2>Random Forest</h2>
+    <p>Loan Default: {{ predictions['Random Forest']['Loan Default'] }}</p>
+    <p>Probability of Default: {{ predictions['Random Forest']['Probability of Default'] }}</p>
+
+    <h2>Stacking</h2>
+    <p>Loan Default: {{ predictions['Stacking']['Loan Default'] }}</p>
+    <p>Probability of Default: {{ predictions['Stacking']['Probability of Default'] }}</p>
+</body>
+</html>

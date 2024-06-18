@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FastAPI Prediction Form</title>
+</head>
+<body>
+    <h1>FastAPI Prediction Form</h1>
+    <form action="/predict" method="post">
+        <label for="Age">Age:</label>
+        <input type="number" id="Age" name="Age" required><br><br>
+
+        <label for="Annual_Income">Annual Income:</label>
+        <input type="number" id="Annual_Income" name="Annual_Income" required><br><br>
+
+        <label for="Credit_Score">Credit Score:</label>
+        <input type="number" id="Credit_Score" name="Credit_Score" required><br><br>
+
+        <label for="Employment_Years">Employment Years:</label>
+        <input type="number" id="Employment_Years" name="Employment_Years" required><br><br>
+
+        <label for="Loan_Amount_Requested">Loan Amount Requested:</label>
+        <input type="number" id="Loan_Amount_Requested" name="Loan_Amount_Requested" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>

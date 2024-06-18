@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict Loan Default</title>
+</head>
+<body>
+    <h1>Predict Loan Default</h1>
+    <form action="/predict" method="post">
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="Age" value="30"><br><br>
+        
+        <label for="income">Annual Income:</label><br>
+        <input type="number" id="income" name="Annual_Income" value="50000"><br><br>
+        
+        <label for="credit_score">Credit Score:</label><br>
+        <input type="number" id="credit_score" name="Credit_Score" value="700"><br><br>
+        
+        <label for="employment_years">Employment Years:</label><br>
+        <input type="number" id="employment_years" name="Employment_Years" value="5"><br><br>
+        
+        <label for="loan_amount">Loan Amount Requested:</label><br>
+        <input type="number" id="loan_amount" name="Loan_Amount_Requested" value="20000"><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if logistic_result %}
+    <h2>Logistic Regression</h2>
+    <p>Loan Default: {{ logistic_result['Loan Default'] }}</p>
+    <p>Probability of Default: {{ logistic_result['probability of default'] }}</p>
+    {% endif %}
+
+    {% if random_forest_result %}
+    <h2>Random Forest</h2>
+    <p>Loan Default: {{ random_forest_result['Loan Default'] }}</p>
+    <p>Probability of Default: {{ random_forest_result['probability of default'] }}</p>
+    {% endif %}
+
+    {% if stacking_result %}
+    <h2>Stacking</h2>
+    <p>Loan Default: {{ stacking_result['Loan Default'] }}</p>
+    <p>Probability of Default: {{ stacking_result['probability of default'] }}</p>
+    {% endif %}
+</body>
+</html>
